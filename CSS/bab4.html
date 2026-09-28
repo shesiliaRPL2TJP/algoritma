@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB 4 - Belajar CSS</title>
+
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel:"stylesheet" href:"style-bab4.css"> 
+</head>
+<body>
+    
+    <header id="site-header">
+      <h1>Belajar CSS Dasar</h1>
+      <p>Kelas X RPL &mdash; SMK TJP Tuban</p>
+    </header>
+
+    <main class="konten-utama">
+
+      <section class="kartu">
+        <h2>Selector Elemen</h2>
+        <p>paragraf ini diatur oleh selector elemen <code>p</code>.</p>
+        <p>Semua tag &lt;p&gt; dihalaman akan mendapat gaya yang sama.</p>
+      </section>
+
+      <section class="kartu-highlight">
+        <h2>Selector Class</h2>
+        <p>Secrion ini memilikidua class: <code>kartu</code> dan <code>highlight</code>.</p>
+        <p class="teks-kecil">Teks ini memiliki class teks-kecil.</p>
+      </section>
+
+      <section class="kartu" id="demo-warna">
+        <h2>Selector ID & Warna</h2>
+        <p>Section ini memiliki id <code>demo-warna</code>.</p>
+        <p style="color: tomato; font-weight:bold;">Ini contoh inline CSS.</p>
+      </section>
+
+      <section class="kartu">
+        <h2>Properti Teks</h2>
+        <p class="teks-besar">Teks dengan letter-spacing.</p>
+        <p class="teks-bayangan">Teks dengan text-shadow.</p>
+        <p class="teks-kapital">teks ini akan menjadi huruf kapital semua.</p>
+      </section>
+
+      <section class="kartu demo-bg">
+        <h2>Background</h2>
+        <p>Section ini memiliki latar warna gradient.</p>
+      </section>
+
+      </main>
+
+      <footer id="site-footer">
+        <p>&copy; 2024 SMK TJP Tuban &mdash; semua hak dilindungi</p>
+      </footer>
+
+</body>
+</html>
