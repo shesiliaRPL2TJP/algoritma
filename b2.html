@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LKPD - Pemrograman Web Dasar</title>
+  <style>
+    /* Masukkan kode CSS yang sudah diketik sebelumnya di sini */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    /* === SELECTOR KOMBINASI === */
+    nav {
+      background-color: #2E86C1;
+      padding: 10px;
+    }
+
+    nav a { color: white; text-decoration: none; }
+
+    .menu > li { display: inline-block; margin-right: 15px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+    }
+
+    tr:nth-child(even) { background-color: #F2F3F4; }
+    tr:nth-child(odd) { background-color: white; }
+
+    li:nth-child(3n+1) { font-weight: bold; }
+
+    /* === PSEUDO-CLASS === */
+    .tombol {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #2E86C1;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .tombol:hover { background: #1A5276; transform: translateY(-2px); }
+    .tombol:active { transform: translateY(0); }
+
+    input:focus {
+      outline: none;
+      border-color: #2E86C1;
+      box-shadow: 0 0 0 3px rgba(46, 134, 193, 0.3);
+    }
+
+    /* === PSEUDO-ELEMENT === */
+    h2::before {
+      content: '▶ ';
+      color: #2E86C1;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #D4AC0D;
+      margin-top: 8px;
+    }
+
+    p.artikel::first-letter {
+      font-size: 3em;
+      font-weight: bold;
+      float: left;
+      line-height: 1;
+      margin-right: 8px;
+      color: #1A5276;
+    }
+
+    ::selection {
+      background: #AED6F1;
+      color: #1A5276;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigasi (Menguji Selector Kombinasi Descendant & Child) -->
+  <nav>
+    <ul class="menu" style="list-style: none; padding: 0; margin: 0;">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Artikel</a></li>
+      <li><a href="#">Tentang</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <hr style="margin: 20px 0;">
+
+  <!-- Judul Section (Menguji Pseudo-Element ::before & ::after) -->
+  <h2>CSS Lanjutan</h2>
+
+  <!-- Paragraf Artikel (Menguji Pseudo-Element ::first-letter / Drop Cap) -->
+  <p class="artikel">
+    Transisi CSS memungkinkan perubahan nilai properti berlangsung secara halus (smooth) dalam rentang waktu tertentu, bukan langsung berubah seketika. Cobalah seleksi teks ini untuk melihat efek pseudo-element selection.
+  </p>
+
+  <!-- Tombol & Form Input (Menguji Pseudo-Class :hover, :active, dan :focus) -->
+  <div style="margin: 20px 0;">
+    <button class="tombol">Klik Saya</button>
+    <br><br>
+    <input type="text" placeholder="Ketik sesuatu di sini..." style="padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+  </div>
+
+  <!-- Daftar (Menguji nth-child 3n+1) -->
+  <h3>Daftar Elemen (3n+1 Bold)</h3>
+  <ul>
+    <li>Elemen 1 (Cetak Tebal)</li>
+    <li>Elemen 2</li>
+    <li>Elemen 3</li>
+    <li>Elemen 4 (Cetak Tebal)</li>
+    <li>Elemen 5</li>
+    <li>Elemen 6</li>
+    <li>Elemen 7 (Cetak Tebal)</li>
+  </ul>
+
+  <!-- Tabel (Menguji nth-child even/odd zebra striping) -->
+  <h3>Tabel (Zebra Striping)</h3>
+  <table>
+    <thead>
+      <tr style="background-color: #2E86C1; color: white;">
+        <th>No</th>
+        <th>Nama</th>
+        <th>Kelas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>shesil</td>
+        <td>X RPL 2</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>qia</td>
+        <td>X RPL 2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>kekes</td>
+        <td>X RPL 2</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Icel</td>
+        <td>X RPL 2</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
